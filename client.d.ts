@@ -23,6 +23,7 @@ declare module 'vue-router/auto-routes' {
    * }
    * ```
    */
+  // eslint-disable-next-line pickier/no-unused-vars
   export function handleHotUpdate(
     router: Router,
     hotUpdateCallback?: (newRoutes: RouteRecordRaw[]) => void,
@@ -60,6 +61,7 @@ declare module 'vue-router/auto' {
 
 // Make the macros globally available
 declare global {
+  // eslint-disable-next-line pickier/no-unused-vars
   const definePage: (typeof import('vite-plugin-routes/runtime'))['definePage']
 }
 

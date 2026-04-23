@@ -73,6 +73,7 @@ export function createRoutesContext(options: ResolvedOptions) {
           }
 
           // the ignore option must be relative to cwd or absolute
+          // eslint-disable-next-line pickier/no-unused-vars
           const ignorePattern = folder.exclude.map(f =>
             // if it starts with ** then it will work as expected
             f.startsWith('**') ? f : relative(folder.src, f),

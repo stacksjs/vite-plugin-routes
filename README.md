@@ -46,7 +46,7 @@ import VueRouter from 'vite-plugin-routes/vite'
 export default defineConfig({
   plugins: [
     VueRouter({
-      /* options */
+      /_ options _/
     }),
     // ⚠️ Vue must be placed after VueRouter()
     Vue(),
@@ -66,7 +66,7 @@ import VueRouter from 'vite-plugin-routes/rollup'
 export default {
   plugins: [
     VueRouter({
-      /* options */
+      /_ options _/
     }),
     // ⚠️ Vue must be placed after VueRouter()
     Vue(),
@@ -82,10 +82,10 @@ export default {
 ```ts
 // webpack.config.js
 module.exports = {
-  /* ... */
+  /_ ... _/
   plugins: [
     require('vite-plugin-routes/webpack')({
-      /* options */
+      /_ options _/
     }),
   ],
 }
@@ -102,7 +102,7 @@ module.exports = {
   configureWebpack: {
     plugins: [
       require('vite-plugin-routes/webpack')({
-        /* options */
+        /_ options _/
       }),
     ],
   },
@@ -128,7 +128,7 @@ build({
 
 ## Setup
 
-After installing, **you should run your dev server** (usually `npm run dev`) **to generate the first version of the types**. Then you need to add the types to your `tsconfig.json`.
+After installing, **you should run your dev server**(usually `npm run dev`)**to generate the first version of the types**. Then you need to add the types to your `tsconfig.json`.
 
 ```json
 {
@@ -173,7 +173,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 createRouter({
   history: createWebHistory(),
   // pass the generated routes written by the plugin 🤖
-+  routes,
+
++ routes,
+
 })
 ```
 

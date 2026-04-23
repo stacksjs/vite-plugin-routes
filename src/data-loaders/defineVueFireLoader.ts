@@ -299,6 +299,7 @@ export interface VueFireDataLoaderEntry<
   get pendingLoad(): Promise<void> | null
 }
 
+// eslint-disable-next-line pickier/no-unused-vars
 const DEFAULT_DEFINE_LOADER_OPTIONS = {
   lazy: false,
   server: true,

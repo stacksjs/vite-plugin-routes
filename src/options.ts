@@ -45,6 +45,7 @@ export interface RoutesFolderOption {
    * },
    * ```
    */
+  // eslint-disable-next-line pickier/no-unused-vars
   path?: string | ((filepath: string) => string)
 
   /**
@@ -73,6 +74,7 @@ export interface RoutesFolderOption {
  * Normalized options for a routes folder.
  */
 export interface RoutesFolderOptionResolved extends RoutesFolderOption {
+  // eslint-disable-next-line pickier/no-unused-vars
   path: string | ((filepath: string) => string)
   /**
    * Final glob pattern to match files in the folder.
@@ -85,6 +87,7 @@ export interface RoutesFolderOptionResolved extends RoutesFolderOption {
 
 export type _OverridableOption<T, AllowedTypes = T> =
   | AllowedTypes
+  // eslint-disable-next-line pickier/no-unused-vars
   | ((existing: T) => T)
 
 /**
@@ -99,6 +102,7 @@ export function resolveOverridableOption<T>(
   value?: _OverridableOption<T, T>,
 ): T {
   return typeof value === 'function'
+    // eslint-disable-next-line pickier/no-unused-vars
     ? (value as (existing: T) => T)(defaultValue)
     : (value ?? defaultValue)
 }
@@ -167,6 +171,7 @@ export interface Options {
    * Defines how page components should be imported. Defaults to dynamic imports to enable lazy loading of pages.
    * @default `'async'`
    */
+  // eslint-disable-next-line pickier/no-unused-vars
   importMode?: 'sync' | 'async' | ((filepath: string) => 'sync' | 'async')
 
   /**
@@ -255,6 +260,7 @@ export interface ServerContext {
 
 function normalizeRoutesFolderOption(routesFolder: RoutesFolder) {
   return (isArray(routesFolder) ? routesFolder : [routesFolder]).map(
+    // eslint-disable-next-line pickier/no-unused-vars
     routeOption =>
       // normalizing here allows to have a better type for the resolved options
       normalizeRouteOption(

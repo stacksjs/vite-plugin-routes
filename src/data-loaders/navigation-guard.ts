@@ -75,6 +75,7 @@ export class NavigationResult {
  * @param {Function} router.selectNavigationResult - function to select navigation result from multiple results
  * @returns A function to remove all guards and cleanup
  */
+// eslint-disable-next-line pickier/no-unused-vars
 export function setupLoaderGuard({
   router,
   app,
@@ -387,6 +388,7 @@ export interface SetupLoaderGuardOptions extends DataLoaderPluginOptions {
 export type _DataLoaderRedirectResult = Exclude<
   ReturnType<NavigationGuard>,
   // only preserve values that cancel the navigation
+  // eslint-disable-next-line pickier/no-unused-vars
   Promise<unknown> | ((...args: any[]) => any) | true | void | undefined
 >
 

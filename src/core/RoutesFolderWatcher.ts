@@ -14,6 +14,7 @@ import { appendExtensionListToPattern, asRoutePath } from './utils'
 
 export class RoutesFolderWatcher {
   src: string
+  // eslint-disable-next-line pickier/no-unused-vars
   path: string | ((filepath: string) => string)
   extensions: string[]
   filePatterns: string[]
@@ -119,8 +120,10 @@ export function resolveFolderOptions(
   }
 }
 
+// eslint-disable-next-line pickier/no-unused-vars
 function overrideOption(
   existing: string[] | string,
+  // eslint-disable-next-line pickier/no-unused-vars
   newValue: undefined | string[] | string | ((existing: string[]) => string[]),
 ): string[] {
   const asArray = typeof existing === 'string' ? [existing] : existing

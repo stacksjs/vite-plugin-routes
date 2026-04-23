@@ -163,6 +163,7 @@ This version requires vue-router@4.4.0 or higher. The `unplugin-vue-router/types
 ### BREAKING CHANGES
 
 - `createRouter()` now requires the explicit `router`
+
   property to be set and imported:
 
 ```diff
@@ -171,7 +172,9 @@ import { createRouter, createWebHistory } from 'vue-router/auto'
 
 createRouter({
   history: createWebHistory(),
-+  routes
+
++ routes
+
 })
 ```
 
@@ -179,6 +182,7 @@ This also means that runtime `extendRoutes()` option is not needed. It
 has been deprecated and will be removed in the next major release.
 
 - `Tree` and `PrefixTree` insert method expects a path without the file
+
   extension. They also expect the fullpath of the file as a second
   argument (it used to be optional). This aligns better with their responsibility as they shouldn't be trimming the extension like they used to.
 
@@ -193,6 +197,7 @@ This shouldn't affect most users as the Tree implementation is used
 internally to represent the folder structure.
 
 - **pkg:** The package is now of `"type": "module"`. It shouldn't
+
   break anything for users but this is just in case, we all know how fragile this js ecosystem is sometimes...
 
 ## [0.8.8](https://github.com/posva/unplugin-vue-router/compare/v0.8.7...v0.8.8) (2024-05-22)
@@ -316,6 +321,7 @@ For people using the file-based routing, you now need to add `unplugin-vue-route
 - `VueRouterExports` -> `VueRouterAutoImports`
 
 - Data Loaders have been redesigned to be more flexible
+
   and account for other libraries. Notably, the caching behavior has been
   moved out of the basic loader to an extended one [pinia-colada](https://uvr.esm.is/data-loaders/colada/) and the [basic loader](https://uvr.esm.is/data-loaders/basic/)
   has no cache. All of the pending bugs have also been fixed.
@@ -327,15 +333,22 @@ For people using the file-based routing, you now need to add `unplugin-vue-route
 
   - The `dataFetching` option is no longer needed.
   - Manual work needed to add loaders with `HasDataLoaderMeta` has been
+
     removed. It is just no longer needed. Loaders are picked up from lazy
     loaded components and must otherwise be directly added to a `meta.loaders`
     array. See the example at <https://uvr.esm.is/data-loaders/rfc.html#basic-example>
+
   - The function `setupDataFetchingGuard` has been replaced with a Vue
+
     Plugin. See <https://uvr.esm.is/data-loaders/rfc.html#data-loader-setup>
     for details.
+
   - If you were relying on `cacheTime`, use the `staleTime` option in the
+
     new [`defineColadaLoader()`](https://uvr.esm.is/rfcs/data-loaders/colada) based off [@pinia/colada](https://github.com/posva/pinia-colada)
+
   - To reduce the dependency on file-based router, things have been
+
     refactored and none of the defineLoader functions are automatically
     imported anymore. You can add them yourself to the list of auto
     imports, or import them from `unplugin-vue-router/data-loaders/...`. The good news is you
@@ -346,6 +359,7 @@ For people using the file-based routing, you now need to add `unplugin-vue-route
   Request to improve the `CHANGELOG.md`.
 
   - The navigation guard is replaced in favor of a Vue
+
     plugin:
 
   Replace
@@ -365,26 +379,34 @@ For people using the file-based routing, you now need to add `unplugin-vue-route
   ```
 
   - `vue-router/auto/routes` becomes `vue-router/auto-routes`. This change was necessary to improve compatibility with
+
     TypeScript and other tools in the ecosystem. Most of the time you don't
     need to use this path but if you were using it, replace it:
 
   ```diff
+
   - import { } from 'vue-router/auto/routes'
   + import { } from 'vue-router/auto-routes'
+
   ```
 
   - Data Loaders now return an `isLoading` property instead
+
     of `pending`. This aligns better with the wording of Data Loaders being
     in a loading state rather than pending, which can have more meanings.
+
   - You know need to add `unplugin-vue-router/client` to the `types` property of your tsconfig. See [setup](https://uvr.esm.is/introduction.html#setup) for an example. This file contains the augmentation of the `vue-router/auto` module that was previously in `typed-router.d.ts`. You also need to set the `modeResolution` to `Bundler` in your `tsconfig.json`.
 
   - the existing `defineLoader` is being replaced by a
+
     basic loader without cache. The version with cache will be implemented
     by adding a library that properly handles the caching. This new strategy
     will also enable other integrations like VueFire, Apollo, and custom
     ones. Keep an eye (subscribe) to the RFC for news and to discus about
     the future of Data Loaders: <https://github.com/vuejs/rfcs/discussions/460>
+
   - since data loaders aren't meant to be awaited in script
+
     setup (they are awaited at the navigation level), they now return a
     promise of the raw data only, not of the UseDataLoaderReturn, to make it
     clearer that this syntax is a bit special and should only be used within
@@ -477,6 +499,7 @@ For people using the file-based routing, you now need to add `unplugin-vue-route
 ### BREAKING CHANGES
 
 - `filePattern` is now named `filePatterns` because it
+
   allows arrays. This is only a naming change.
 
 ## [0.5.2](https://github.com/posva/unplugin-vue-router/compare/v0.5.1...v0.5.2) (2023-03-02)
@@ -503,6 +526,7 @@ For people using the file-based routing, you now need to add `unplugin-vue-route
 ### BREAKING CHANGES
 
 - if you were setting directly `route.meta` within
+
   `extendRoute()`, you know need to use `route.addToMeta()` instead to
   have the same merging behavior. Directly setting `route.meta` now
   replaces the `meta` property completely.
@@ -568,7 +592,7 @@ For people using the file-based routing, you now need to add `unplugin-vue-route
 
 ### Bug Fixes
 
-- **build:** remove **DEV** ([a50b713](https://github.com/posva/unplugin-vue-router/commit/a50b713b3c11f3b3be5bba7a41d558fa2522caaa))
+- **build:**remove**DEV** ([a50b713](https://github.com/posva/unplugin-vue-router/commit/a50b713b3c11f3b3be5bba7a41d558fa2522caaa))
 - read name and path from definePage ([dffcc61](https://github.com/posva/unplugin-vue-router/commit/dffcc613462e8165c7c676f40a7da6d5554d1e8b)), closes [#74](https://github.com/posva/unplugin-vue-router/issues/74)
 
 ### Features
@@ -660,6 +684,7 @@ for up to date information on how to use the data fetching.
 ### BREAKING CHANGES
 
 - the module name is now `vue-router/auto` instead of
+
   `@vue-router`. To upgrade to this version you only need to replace it:
 
   ```diff
@@ -674,10 +699,13 @@ for up to date information on how to use the data fetching.
   towards this plugin.
 
 - the default value of `routesFolder` is changed from
+
   `src/routes` to `src/pages`. If you **didn't change this setting**, you
   will have to either:
+
   - rename your `src/routes` folder to `src/pages`
   - add `routesFolder: 'src/routes'` to the options of the plugin in your
+
     vite, webpack, etc config
 
 ## [0.0.21](https://github.com/posva/unplugin-vue-router/compare/v0.0.20...v0.0.21) (2022-07-12)

@@ -50,6 +50,7 @@ import {} from './utils'
  * @param name - name of the route to have typed routes
  * @param options - options to configure the data loader
  */
+// eslint-disable-next-line pickier/no-unused-vars
 export function defineColadaLoader<Name extends keyof RouteMap, Data>(
   name: Name,
   options: DefineDataColadaLoaderOptions_DefinedData<Name, Data>,
@@ -61,6 +62,7 @@ export function defineColadaLoader<Name extends keyof RouteMap, Data>(
  * @param name - name of the route to have typed routes
  * @param options - options to configure the data loader
  */
+// eslint-disable-next-line pickier/no-unused-vars
 export function defineColadaLoader<Name extends keyof RouteMap, Data>(
   name: Name,
   options: DefineDataColadaLoaderOptions_LaxData<Name, Data>,
@@ -524,6 +526,7 @@ export interface _DefineDataColadaLoaderOptions_Common<
    * Key associated with the data and passed to pinia colada
    * @param to - Route to load the data
    */
+  // eslint-disable-next-line pickier/no-unused-vars
   key: EntryKey | ((to: RouteLocationNormalizedLoaded<Name>) => EntryKey)
 
   /**
@@ -710,6 +713,7 @@ function hasRouteChanged(
   )
 }
 
+// eslint-disable-next-line pickier/no-unused-vars
 const DEFAULT_DEFINE_LOADER_OPTIONS = {
   lazy: false,
   server: true,

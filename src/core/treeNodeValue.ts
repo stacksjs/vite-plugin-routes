@@ -480,6 +480,7 @@ function parseFileSegment(
 
 // TODO: this logic is flawed because it only handles segments. We should use the path parser from vue router that already has all this logic baked in.
 
+// eslint-disable-next-line pickier/no-unused-vars
 const enum ParseRawPathSegmentState {
   static,
   param, // after :

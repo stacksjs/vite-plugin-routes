@@ -36,6 +36,7 @@ import {
  * @param loader - function that returns a promise with the data
  * @param options - options to configure the data loader
  */
+// eslint-disable-next-line pickier/no-unused-vars
 export function defineBasicLoader<Name extends keyof RouteMap, Data>(
   name: Name,
   loader: DefineLoaderFn<
@@ -53,6 +54,7 @@ export function defineBasicLoader<Name extends keyof RouteMap, Data>(
  * @param loader - function that returns a promise with the data
  * @param options - options to configure the data loader
  */
+// eslint-disable-next-line pickier/no-unused-vars
 export function defineBasicLoader<Name extends keyof RouteMap, Data>(
   name: Name,
   loader: DefineLoaderFn<
@@ -426,6 +428,7 @@ export type DefineDataLoaderOptions = DefineDataLoaderOptions_LaxData
 
 export interface DataLoaderContext extends DataLoaderContextBase {}
 
+// eslint-disable-next-line pickier/no-unused-vars
 const DEFAULT_DEFINE_LOADER_OPTIONS = {
   lazy: false as boolean,
   server: true,

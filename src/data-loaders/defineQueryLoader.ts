@@ -357,6 +357,7 @@ export interface QueryLoaderEntry<
 
 export interface QueryLoaderContext extends DataLoaderContextBase {}
 
+// eslint-disable-next-line pickier/no-unused-vars
 const DEFAULT_DEFINE_QUERY_LOADER_OPTIONS: DefineQueryLoaderOptions<
   boolean,
   unknown

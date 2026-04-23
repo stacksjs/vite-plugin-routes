@@ -45,6 +45,7 @@ export interface AutoExportLoadersOptions {
    * Filter page components to apply the auto-export (defined with `createFilter()` from `unplugin-utils`) or array
    * of globs.
    */
+  // eslint-disable-next-line pickier/no-unused-vars
   filterPageComponents: ((id: string) => boolean) | string[]
 
   /**
@@ -66,6 +67,7 @@ export interface AutoExportLoadersOptions {
  * @experimental - This API is experimental and can be changed in the future. It's used internally by `experimental.autoExportsDataLoaders`
  
  */
+// eslint-disable-next-line pickier/no-unused-vars
 export function AutoExportLoaders({
   filterPageComponents: filterPagesOrGlobs,
   loadersPathsGlobs,

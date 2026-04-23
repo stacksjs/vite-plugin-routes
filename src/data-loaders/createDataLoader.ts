@@ -155,6 +155,7 @@ export interface DefineDataLoaderOptionsBase_LaxData
     // array of constructors
     | Array<new (...args: any[]) => any>
     // custom type guard
+    // eslint-disable-next-line pickier/no-unused-vars
     | ((reason?: unknown) => boolean)
 }
 
