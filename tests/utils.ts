@@ -4,7 +4,9 @@ export const delay = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
 export function mockPromise<Resolved, Err>(resolved: Resolved, rejected?: Err) {
+  // eslint-disable-next-line pickier/no-unused-vars
   let _resolve: null | ((resolvedValue: Resolved) => void) = null;
+  // eslint-disable-next-line pickier/no-unused-vars
   let _reject: null | ((rejectedValue?: Err) => void) = null;
   function resolve(resolvedValue?: Resolved) {
     if (!_resolve || !promise)

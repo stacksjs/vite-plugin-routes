@@ -6,6 +6,7 @@ export function mockWarn() {
   expect.extend({
     toHaveBeenWarned(received: string | RegExp) {
       asserted.set(received.toString(), received);
+      // eslint-disable-next-line pickier/no-unused-vars
       const passed = warn.mock.calls.some((args) =>
         typeof received === "string"
           ? args[0].indexOf(received) > -1

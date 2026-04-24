@@ -50,6 +50,7 @@ export function testDefineLoader<Context = void>(
 ) {
   let customContext: Context | undefined;
 
+  // eslint-disable-next-line pickier/no-unused-vars
   function mockedLoader<T = string | NavigationResult>(
     // boolean is easier to handle for router mock
     options?: DefineDataLoaderOptionsBase_LaxData & { key?: string },
