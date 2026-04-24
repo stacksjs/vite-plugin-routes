@@ -95,7 +95,7 @@
     "changelog": "bunx changelogen --output CHANGELOG.md",
     "prepublishOnly": "bun --bun run build",
     "release": "bun run changelog && bunx bumpp package.json ./packages/vite-plugin-layouts/package.json --all",
-    "test": "bun test",
+    "test": "vitest run",
     "typecheck": "bun --bun tsc --noEmit",
     "dev:docs": "bun --bun vitepress dev docs",
     "build:docs": "bun --bun vitepress build docs",
