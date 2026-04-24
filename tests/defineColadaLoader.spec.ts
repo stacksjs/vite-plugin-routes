@@ -33,8 +33,8 @@ import {
 } from 'vitest'
 import { defineComponent, nextTick } from 'vue'
 import { getRouter } from 'vue-router-mock'
-import { testDefineLoader } from '../../tests/data-loaders'
-import RouterViewMock from '../../tests/data-loaders/RouterViewMock.vue'
+import { testDefineLoader } from './data-loaders'
+import RouterViewMock from './data-loaders/RouterViewMock.vue'
 import { defineColadaLoader } from '../src/data-loaders/defineColadaLoader'
 
 describe(

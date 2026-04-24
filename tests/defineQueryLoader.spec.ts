@@ -11,7 +11,7 @@ import {
 } from 'vite-plugin-routes/data-loaders'
 import { afterEach, describe } from 'vitest'
 import { shallowRef } from 'vue'
-import { testDefineLoader } from '../../tests/data-loaders'
+import { testDefineLoader } from './data-loaders'
 import { defineQueryLoader } from '../src/data-loaders/defineQueryLoader'
 
 describe.skip('defineQueryLoader', () => {

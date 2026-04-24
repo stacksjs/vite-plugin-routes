@@ -28,9 +28,9 @@ import {
 } from 'vitest'
 import { defineComponent } from 'vue'
 import { getRouter } from 'vue-router-mock'
-import { testDefineLoader } from '../../tests/data-loaders'
-import RouterViewMock from '../../tests/data-loaders/RouterViewMock.vue'
-import { mockPromise } from '../../tests/utils'
+import { testDefineLoader } from './data-loaders'
+import RouterViewMock from './data-loaders/RouterViewMock.vue'
+import { mockPromise } from './utils'
 import {
   defineBasicLoader,
   INITIAL_DATA_KEY,

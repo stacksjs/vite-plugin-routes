@@ -32,8 +32,8 @@ import { getRouter } from 'vue-router-mock'
 import {
   useDataOne,
   useDataTwo,
-} from '../../tests/data-loaders/ComponentWithLoader.vue'
-import { mockPromise } from '../../tests/utils'
+} from './data-loaders/ComponentWithLoader.vue'
+import { mockPromise } from './utils'
 import {
   defineBasicLoader,
 } from '../src/data-loaders/defineLoader'
@@ -176,7 +176,7 @@ describe('navigation-guard', () => {
       name: '_test',
       path: '/fetch',
       component: () =>
-        import('../../tests/data-loaders/ComponentWithLoader.vue'),
+        import('./data-loaders/ComponentWithLoader.vue'),
     })
     await router.push('/fetch')
     const set = router.currentRoute.value.meta[LOADER_SET_KEY]
