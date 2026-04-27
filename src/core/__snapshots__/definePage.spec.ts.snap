@@ -1,20 +1,15 @@
-// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`definePage removes definePage 1`] = `
-"
-<script setup>
-const a = 1
-
-const b = 1
-</script>
-
-<template>
-  <div>hello</div>
-</template>
-      "
+exports[`definePage > imports > keeps used default imports 1`] = `
+"import my_var from './lib'
+export default {
+  meta: {
+    [my_var]: 'hello',
+  }
+  }"
 `;
 
-exports[`definePage imports keeps used named imports 1`] = `
+exports[`definePage > imports > keeps used named imports 1`] = `
 "import {my_var, my_func, my_num} from './lib'
 export default {
   meta: {
@@ -27,29 +22,11 @@ export default {
 }"
 `;
 
-exports[`definePage imports keeps used default imports 1`] = `
-"import my_var from './lib'
-export default {
-  meta: {
-    [my_var]: 'hello',
-  }
-  }"
-`;
+exports[`definePage > imports > removes default import if not used 1`] = `"export default {name: 'ok'}"`;
 
-exports[`definePage imports removes default import if not used 1`] = `"export default {name: 'ok'}"`;
+exports[`definePage > imports > removes star imports if not used 1`] = `"export default {name: 'ok'}"`;
 
-exports[`definePage imports works with star imports 1`] = `
-"import * as lib from './my-lib'
-export default {
-  meta: {
-    [lib.my_var]: 'hello',
-  }
-  }"
-`;
-
-exports[`definePage imports removes star imports if not used 1`] = `"export default {name: 'ok'}"`;
-
-exports[`definePage imports works when combining named and default imports 1`] = `
+exports[`definePage > imports > works when combining named and default imports 1`] = `
 "import my_var, {my_func} from './lib'
 export default {
   meta: {
@@ -59,14 +36,16 @@ export default {
 }"
 `;
 
-exports[`definePage works with jsx 1`] = `
-"export default {
-      name: 'custom',
-      path: '/custom',
-    }"
+exports[`definePage > imports > works with star imports 1`] = `
+"import * as lib from './my-lib'
+export default {
+  meta: {
+    [lib.my_var]: 'hello',
+  }
+  }"
 `;
 
-exports[`definePage works if file is named definePage 1`] = `
+exports[`definePage > removes definePage 1`] = `
 "
 <script setup>
 const a = 1
@@ -78,4 +57,25 @@ const b = 1
   <div>hello</div>
 </template>
       "
+`;
+
+exports[`definePage > works if file is named definePage 1`] = `
+"
+<script setup>
+const a = 1
+
+const b = 1
+</script>
+
+<template>
+  <div>hello</div>
+</template>
+      "
+`;
+
+exports[`definePage > works with jsx 1`] = `
+"export default {
+      name: 'custom',
+      path: '/custom',
+    }"
 `;
