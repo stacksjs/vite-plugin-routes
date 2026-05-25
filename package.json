@@ -116,7 +116,7 @@
   "dependencies": {
     "@vue-macros/common": "3.1.2",
     "ast-walker-scope": "^0.9.0",
-    "chokidar": "^4.0.3",
+    "chokidar": "^5.0.0",
     "fast-glob": "^3.3.3",
     "json5": "^2.2.3",
     "local-pkg": "^1.2.1",
