@@ -146,7 +146,7 @@
     "execa": "^9.6.1",
     "firebase": "^12.14.0",
     "happy-dom": "^20.10.2",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.0.7",
     "minimist": "^1.2.8",
     "nodemon": "^3.1.14",
     "p-series": "^3.0.0",
