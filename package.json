@@ -143,7 +143,7 @@
     "bun-plugin-dtsx": "^0.11.1",
     "chalk": "^6.0.0",
     "conventional-changelog-cli": "^5.0.0",
-    "execa": "^9.6.1",
+    "execa": "^10.0.1",
     "firebase": "^12.16.0",
     "happy-dom": "^20.11.0",
     "lint-staged": "^17.1.0",
