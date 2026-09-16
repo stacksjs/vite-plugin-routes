@@ -165,7 +165,7 @@
     "vitepress-plugin-llms": "^1.13.3",
     "vitest": "^4.1.10",
     "vue": "^3.5.40",
-    "vue-router": "^4.6.4",
+    "vue-router": "^5.3.1",
     "vue-router-mock": "^1.1.0",
     "vue-tsc": "^2.2.12",
     "vuefire": "^3.2.3",
