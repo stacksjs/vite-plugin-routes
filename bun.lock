@@ -57,7 +57,7 @@
         "vitest": "^4.1.10",
         "vue": "^3.5.40",
         "vue-router": "^4.6.4",
-        "vue-router-mock": "^1.1.0",
+        "vue-router-mock": "^2.0.2",
         "vue-tsc": "^2.2.12",
         "vuefire": "^3.2.3",
         "yorkie": "^2.0.0",
@@ -1555,7 +1555,7 @@
 
     "vue-router": ["vue-router@4.6.4", "", { "dependencies": { "@vue/devtools-api": "^6.6.4" }, "peerDependencies": { "vue": "^3.5.0" } }, "sha512-Hz9q5sa33Yhduglwz6g9skT8OBPii+4bFn88w6J+J4MfEo4KRRpmiNG/hHHkdbRFlLBOqxN8y8gf2Fb0MTUgVg=="],
 
-    "vue-router-mock": ["vue-router-mock@1.1.0", "", { "peerDependencies": { "vue": "^3.2.23", "vue-router": "^4.0.12" } }, "sha512-RhKhxkiZh2zB2eRkzfcCILQQ0ZUc0tk7CE2ZC1PGJYi5GOU+2QQAGHtTCgb8V4B/OPm9ws+X5Q9SQB5vyTXxBQ=="],
+    "vue-router-mock": ["vue-router-mock@2.0.2", "", { "peerDependencies": { "vue": "^3.2.23", "vue-router": "^4.0.12 || ^5.0.0" } }, "sha512-QI6gHBDofiLGI/7f5WhhuB7TbJIUED80MhYuhGORCxEnHPCE6xWXBCancSroiX1sguKjHZZRviUE4ptO3B0U/A=="],
 
     "vue-tsc": ["vue-tsc@2.2.12", "", { "dependencies": { "@volar/typescript": "2.4.15", "@vue/language-core": "2.2.12" }, "peerDependencies": { "typescript": ">=5.0.0" }, "bin": { "vue-tsc": "./bin/vue-tsc.js" } }, "sha512-P7OP77b2h/Pmk+lZdJ0YWs+5tJ6J2+uOQPo7tlBnY44QqQSPYvS0qVT4wqDJgwrZaLe47etJLLQRFia71GYITw=="],
 
